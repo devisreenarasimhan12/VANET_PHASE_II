@@ -1,0 +1,64 @@
+<additional>
+
+    <!-- HQ -->
+    <poi id="HQ" x="250" y="80"
+         color="0,0,255"
+         width="16" height="16"
+         layer="10"/>
+
+    <poi id="HQ_LABEL" x="250" y="100"
+         text="HEADQUARTERS"
+         color="0,0,255"
+         layer="11"/>
+
+    <!-- RSUs -->
+    <poi id="RSU_W" x="-200" y="0" color="255,0,0" width="14" height="14" layer="10"/>
+    <poi id="RSU_C" x="0" y="0" color="255,0,0" width="14" height="14" layer="10"/>
+    <poi id="RSU_E" x="200" y="0" color="255,0,0" width="14" height="14" layer="10"/>
+
+    <poi id="RSU_W_LBL" x="-200" y="20" text="RSU WEST" color="255,0,0" layer="11"/>
+    <poi id="RSU_C_LBL" x="0"    y="20" text="RSU CENTER" color="255,0,0" layer="11"/>
+    <poi id="RSU_E_LBL" x="200"  y="20" text="RSU EAST"   color="255,0,0" layer="11"/>
+
+    <!-- Survivor Phone -->
+    <poi id="PHONE1" x="-20" y="10"
+         color="0,255,255"
+         text="Survivor Device: ID AX23"
+         layer="20"/>
+
+    <!-- RSU Coverage -->
+    <poly id="RSU_RANGE" color="255,0,0,80" fill="true"
+          shape="-80,80 80,80 80,-80 -80,-80" layer="5"/>
+		  
+
+    <!-- VANET MESSAGE ANIMATION -->
+
+    <!-- Detection -->
+    <poi id="HOP1" x="0" y="60"
+         text="RSU: Survivor Detected"
+         color="0,255,0"
+         layer="25"
+         begin="40" end="55"/>
+
+    <!-- Broadcasting -->
+    <poi id="HOP2" x="-100" y="30"
+         text="Broadcasting to Vehicles..."
+         color="255,165,0"
+         layer="25"
+         begin="55" end="65"/>
+
+    <!-- Relaying -->
+    <poi id="HOP3" x="120" y="90"
+         text="Forwarding to HQ..."
+         color="255,165,0"
+         layer="25"
+         begin="65" end="75"/>
+
+    <!-- HQ ALERT -->
+    <poi id="HOP4" x="250" y="110"
+         text="HQ ALERT: Dispatch Rescue"
+         color="0,255,0"
+         layer="30"
+         begin="75" end="140"/>
+
+</additional>

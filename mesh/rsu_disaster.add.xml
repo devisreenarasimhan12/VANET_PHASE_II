@@ -1,0 +1,22 @@
+<additional>
+
+    <!-- RSU marker (red dot) -->
+    <poi id="RSU1" x="6.7" y="-2.8" color="1,0,0" layer="10"/>
+
+    <!-- Disaster marker (yellow dot) -->
+    <poi id="DISASTER" x="6.7" y="-2.8" color="1,1,0" layer="10"/>
+
+    <!-- Close disaster road -->
+    <closingReroute id="closeE1"
+                    edges="E1"
+                    begin="10"
+                    end="500"/>
+
+    <!-- Vehicles coming via E3 will reroute -->
+    <rerouter id="rr1" edges="E3">
+        <interval begin="10" end="500">
+            <destProbReroute id="E5" prob="1.0"/>
+        </interval>
+    </rerouter>
+
+</additional>

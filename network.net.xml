@@ -1,0 +1,30 @@
+<net version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+ <location netOffset="0.00,0.00"
+           convBoundary="-40.00,0.00,40.00,50.00"
+           origBoundary="-40.00,0.00,40.00,50.00"
+           projParameter="!"/>
+
+ <!-- JUNCTIONS -->
+ <junction id="J1" x="-40" y="0" type="priority"/>
+ <junction id="J2" x="40" y="0" type="priority"/>
+ <junction id="J3" x="0"  y="50" type="priority"/>
+
+ <!-- ROADS -->
+ <edge id="E1" from="J1" to="J2">
+   <lane id="E1_0" index="0" speed="13.9" length="80"
+         shape="-40,0 40,0"/>
+ </edge>
+
+ <edge id="E2" from="J2" to="J3">
+   <lane id="E2_0" index="0" speed="13.9" length="70"
+         shape="40,0 0,50"/>
+ </edge>
+
+ <edge id="E3" from="J3" to="J1">
+   <lane id="E3_0" index="0" speed="13.9" length="90"
+         shape="0,50 -40,0"/>
+ </edge>
+
+</net>

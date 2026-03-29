@@ -1,0 +1,73 @@
+<routes>
+
+    <!-- VEHICLE TYPES -->
+
+    <vType id="ambulance"
+           accel="3"
+           decel="6"
+           maxSpeed="30"
+           color="255,255,255"
+           width="3"
+           length="6"
+           guiShape="emergency"/>
+
+    <vType id="scout"
+           accel="2"
+           decel="4"
+           maxSpeed="24"
+           color="255,255,0"
+           guiShape="passenger"/>
+
+
+    <!-- ROUTES -->
+    <route id="WE" edges="W2C C2E"/>
+    <route id="EW" edges="C2E W2C"/>
+    <route id="NS" edges="N2C C2S"/>
+    <route id="SN" edges="C2S N2C"/>
+
+    <route id="LOOP_NS" edges="N2C C2S N2C"/>
+    <route id="LOOP_WE" edges="W2C C2E W2C"/>
+
+
+
+    <!-- ===================== -->
+    <!-- 5 SCOUT VEHICLES -->
+    <!-- ===================== -->
+
+    <vehicle id="scout1" type="scout" depart="60" route="WE"/>
+    <vehicle id="scout2" type="scout" depart="75" route="EW"/>
+    <vehicle id="scout3" type="scout" depart="90" route="NS"/>
+    <vehicle id="scout4" type="scout" depart="105" route="SN"/>
+    <vehicle id="scout5" type="scout" depart="120" route="LOOP_WE"/>
+
+
+
+    <!-- ===================== -->
+    <!-- 10 AMBULANCES -->
+    <!-- ===================== -->
+
+    <!-- ARRIVING -->
+    <vehicle id="amb1" type="ambulance" depart="150" route="WE"/>
+    <vehicle id="amb2" type="ambulance" depart="165" route="EW"/>
+    <vehicle id="amb3" type="ambulance" depart="180" route="NS"/>
+    <vehicle id="amb4" type="ambulance" depart="195" route="SN"/>
+
+    <!-- CIRCLING -->
+    <vehicle id="amb5" type="ambulance" depart="210" route="LOOP_WE"/>
+    <vehicle id="amb6" type="ambulance" depart="225" route="LOOP_WE"/>
+    <vehicle id="amb7" type="ambulance" depart="240" route="LOOP_NS"/>
+    <vehicle id="amb8" type="ambulance" depart="255" route="LOOP_NS"/>
+
+    <!-- PARKED -->
+    <vehicle id="amb9" type="ambulance" depart="270">
+        <route edges="W2C"/>
+        <stop lane="W2C_0" startPos="160" duration="600"/>
+    </vehicle>
+
+    <vehicle id="amb10" type="ambulance" depart="285">
+        <route edges="C2E"/>
+        <stop lane="C2E_0" startPos="150" duration="600"/>
+    </vehicle>
+
+</routes>
+ 

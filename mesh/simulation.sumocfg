@@ -1,0 +1,9 @@
+<configuration>
+
+ <input>
+    <net-file value="city.net.xml"/>
+    <route-files value="routes.rou.xml"/>
+    <additional-files value="rsu.add.xml,people.add.xml"/>
+ </input>
+
+</configuration>

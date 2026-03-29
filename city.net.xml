@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<net version="1.20"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+ <location netOffset="0,0"
+  convBoundary="-400,-400,400,400"
+  origBoundary="-400,-400,400,400"
+  projParameter="!"/>
+
+<!-- WEST → CENTER -->
+<edge id="W2C" from="W" to="C">
+   <lane id="W2C_0" index="0" speed="20" length="400" shape="-400,5 0,5"/>
+   <lane id="W2C_1" index="1" speed="20" length="400" shape="-400,-5 0,-5"/>
+
+   <!-- SIDEWALK -->
+   <lane id="W2C_sw" index="2" speed="5" length="400"
+         shape="-400,10 0,10"
+         allow="pedestrian"/>
+</edge>
+
+
+<!-- CENTER → EAST -->
+<edge id="C2E" from="C" to="E">
+   <lane id="C2E_0" index="0" speed="20" length="400" shape="0,5 400,5"/>
+   <lane id="C2E_1" index="1" speed="20" length="400" shape="0,-5 400,-5"/>
+
+   <lane id="C2E_sw" index="2" speed="5" length="400"
+         shape="0,10 400,10"
+         allow="pedestrian"/>
+</edge>
+
+
+<!-- NORTH → CENTER -->
+<edge id="N2C" from="N" to="C">
+   <lane id="N2C_0" index="0" speed="20" length="400" shape="5,400 5,0"/>
+   <lane id="N2C_1" index="1" speed="20" length="400" shape="-5,400 -5,0"/>
+
+   <lane id="N2C_sw" index="2" speed="5" length="400"
+         shape="10,400 10,0"
+         allow="pedestrian"/>
+</edge>
+
+
+<!-- CENTER → SOUTH -->
+<edge id="C2S" from="C" to="S">
+   <lane id="C2S_0" index="0" speed="20" length="400" shape="5,0 5,-400"/>
+   <lane id="C2S_1" index="1" speed="20" length="400" shape="-5,0 -5,-400"/>
+
+   <lane id="C2S_sw" index="2" speed="5" length="400"
+         shape="10,0 10,-400"
+         allow="pedestrian"/>
+</edge>
+
+
+ <!-- Junctions -->
+ <junction id="C" x="0" y="0" type="traffic_light"/>
+ <junction id="N" x="0" y="400" type="priority"/>
+ <junction id="S" x="0" y="-400" type="priority"/>
+ <junction id="E" x="400" y="0" type="priority"/>
+ <junction id="W" x="-400" y="0" type="priority"/>
+
+ <!-- CONNECTIONS -->
+
+ <!-- West → East -->
+ <connection from="W2C" to="C2E" fromLane="0" toLane="0" dir="s" state="M"/>
+ <connection from="W2C" to="C2E" fromLane="1" toLane="1" dir="s" state="M"/>
+
+ <!-- East → West -->
+ <connection from="C2E" to="W2C" fromLane="0" toLane="0" dir="s" state="M"/>
+ <connection from="C2E" to="W2C" fromLane="1" toLane="1" dir="s" state="M"/>
+
+ <!-- North → South -->
+ <connection from="N2C" to="C2S" fromLane="0" toLane="0" dir="s" state="M"/>
+ <connection from="N2C" to="C2S" fromLane="1" toLane="1" dir="s" state="M"/>
+
+ <!-- South → North -->
+ <connection from="C2S" to="N2C" fromLane="0" toLane="0" dir="s" state="M"/>
+ <connection from="C2S" to="N2C" fromLane="1" toLane="1" dir="s" state="M"/>
+
+</net>

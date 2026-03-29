@@ -1,0 +1,115 @@
+<additional>
+
+    <!-- ===== NORMAL WALKERS ===== -->
+
+    <!-- WEST → EAST walkers -->
+    <person id="p1" depart="5">
+        <walk edges="W2C C2E"/>
+    </person>
+
+    <person id="p2" depart="12">
+        <walk edges="W2C C2E"/>
+    </person>
+
+    <person id="p3" depart="30">
+        <walk edges="W2C C2E"/>
+    </person>
+
+
+    <!-- EAST → WEST walkers -->
+    <person id="p4" depart="10">
+        <walk edges="C2E W2C"/>
+    </person>
+
+    <person id="p5" depart="25">
+        <walk edges="C2E W2C"/>
+    </person>
+
+    <person id="p6" depart="40">
+        <walk edges="C2E W2C"/>
+    </person>
+
+
+    <!-- NORTH → SOUTH walkers -->
+    <person id="p7" depart="8">
+        <walk edges="N2C C2S"/>
+    </person>
+
+    <person id="p8" depart="22">
+        <walk edges="N2C C2S"/>
+    </person>
+
+    <person id="p9" depart="35">
+        <walk edges="N2C C2S"/>
+    </person>
+
+
+    <!-- SOUTH → NORTH walkers -->
+    <person id="p10" depart="15">
+        <walk edges="C2S N2C"/>
+    </person>
+
+    <person id="p11" depart="28">
+        <walk edges="C2S N2C"/>
+    </person>
+
+    <person id="p12" depart="50">
+        <walk edges="C2S N2C"/>
+    </person>
+
+
+
+    <!-- ===== PEOPLE NEAR DISASTER AREA ===== -->
+
+    <!-- Survivor standing near center -->
+    <person id="survivor1" depart="20">
+        <walk edges="W2C"/>
+        <stop lane="W2C_0" startPos="180" duration="400"/>
+    </person>
+
+    <!-- Survivor trapped longer -->
+    <person id="survivor2" depart="45">
+        <walk edges="C2S"/>
+        <stop lane="C2S_0" startPos="150" duration="500"/>
+    </person>
+
+
+
+    <!-- ===== CROWD MOVEMENT ===== -->
+
+    <!-- Group coming toward center -->
+    <person id="crowd1" depart="60">
+        <walk edges="N2C C2E"/>
+    </person>
+
+    <person id="crowd2" depart="62">
+        <walk edges="N2C C2E"/>
+    </person>
+
+    <person id="crowd3" depart="64">
+        <walk edges="N2C C2E"/>
+    </person>
+
+
+    <!-- Group evacuating away -->
+    <person id="evac1" depart="70">
+        <walk edges="W2C N2C"/>
+    </person>
+
+    <person id="evac2" depart="72">
+        <walk edges="W2C N2C"/>
+    </person>
+
+
+
+    <!-- ===== LATE NIGHT WALKERS ===== -->
+
+    <person id="late1" depart="120">
+        <walk edges="C2E W2C"/>
+    </person>
+
+    <person id="late2" depart="140">
+        <walk edges="N2C C2S"/>
+    </person>
+
+</additional>
