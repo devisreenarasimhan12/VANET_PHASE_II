@@ -168,6 +168,6 @@ https://rescue-mesh-display-main.vercel.app/
 
 ---
 
-## Author
+## Authors
+Devisree N, Thanushika K, Santhanalakshme N S
 
-Your Name
